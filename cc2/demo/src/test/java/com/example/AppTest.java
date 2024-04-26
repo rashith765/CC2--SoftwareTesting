@@ -84,6 +84,10 @@ public class AppTest
         File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String path = "C:\\Users\\91701\\Desktop\\it sckcet\\softwareTesting-1\\ExtentReports\\exercise1\\calculator.png";
         FileUtils.copyFile(screen, new File(path));
+    @AfterTest
+    public void finish() {
         
+        driver.quit();
+        }
     }
 }
